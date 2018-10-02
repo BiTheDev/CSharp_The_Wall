@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/wall.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>CodingDojo Wall</title>
+</head>
+<body>
+
+    <div id="container">
+        <h1>CodingDojo Wall   <span>Welcome @ViewBag.userinfo.first_name</span></h1>
+        <a href="/logout">Logout</a>
+        <div id="top">
+            <form action="/CreateMessage" method="POST">
+            <label for="message">Create a message</label>
+            <textarea name="message"></textarea>
+            <button type="submit">Create message</button>
+            </form>
+        </div>
+
+        <div id="wall">
+            @foreach (var item in @ViewBag.allMessages){
+                <div class="message">
+                <p>@item.message - @item.user.first_name @item.user.last_name</p>
+                <input type="hidden" name="messageid" value = @item.id>
+                <span>@item.created_at.ToString("MMM dd yyyy")</span>
+                <span>@ViewBag.error</span>
+                    @if(@item.usersid == @ViewBag.userinfo.id){
+                        <form action="/DeleteMsg" method="POST">
+                        <input type="hidden" name="messageid" value = @item.id>
+                        <button type="submit">Delete message</button>
+                        </form>    
+                    }
+                    
+                </div>
+                <div class="comments">
+                    @foreach(var cmt in @ViewBag.allComments){
+                        if( @item.id == @cmt.messagesid){
+                            <div class="comment">
+                            <input type="hidden" name="cmtid" value=@cmt.id>
+                            <p>@cmt.comment - @cmt.user.first_name @cmt.user.last_name</p>
+                            <span>@cmt.created_at.ToString("MMM dd yyyy")</span>
+                                    @if(@cmt.usersid == @ViewBag.userinfo.id){
+                                    <form action="/DeleteCmt" method="POST">
+                                        <input type="hidden" name="messageid" value = @item.id>
+                                        <input type="hidden" name="cmtid" value=@cmt.id>
+                                        <button type="submit">Delete Comment</button>
+                                    </form>
+                                    }
+                            </div>
+                        }
+                    }   
+                    <form action="/CreateComment" method="POST">
+                        <label for="comment">Comment?</label>
+                        <input type="hidden" name="messageid" value = @item.id>
+                        <textarea name="comment"></textarea>
+                        <button type="submit">Create Comment</button>
+                    </form>
+                </div>
+                
+            }
+        </div>
+        
+    </div>
+</body>
+</html>

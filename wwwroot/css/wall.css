@@ -1,0 +1,36 @@
+#container{
+    width:80% !important;
+    margin:2% 0 0 10% !important;
+    border:1px groove black;
+    box-shadow: 1px 2px gray;
+    padding: 2%;
+}
+a{
+    display: inline-block !important;
+}
+#top textarea{
+    width:80%;
+    resize: none;
+}
+
+#top button, #wall button{
+    display: block !important;
+    width: 15% !important;
+    margin-left:80% !important;
+}
+
+#wall{
+    border:1px solid limegreen;
+    box-shadow: 1px 2px black;
+}
+
+#wall textarea{
+    width:25%;
+    resize:none;
+    margin-left:70% !important;
+}
+
+#wall label{
+    vertical-align: top;
+    margin-left:70% !important;
+}

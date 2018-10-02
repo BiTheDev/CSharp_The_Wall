@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/login.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Login</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Login</h1>
+        @model LoginViewModel
+        <form asp-action="Login" asp-controller="Home" method="POST">
+        <span asp-validation-for="Email" style="color:red"></span> 
+        <label asp-for="Email">Email:</label> 
+        <input class="form-control" type="text" asp-for="Email">
+
+        <span asp-validation-for="Password" style="color:red"></span> 
+        <label asp-for="Password">Password: </label> 
+        <input class="form-control" type="password" asp-for="Password">
+
+        <button type="submit">Submit</button>
+        <a href="/">No account? Create one</a>
+    </form>
+    </div>
+</body>
+</html>

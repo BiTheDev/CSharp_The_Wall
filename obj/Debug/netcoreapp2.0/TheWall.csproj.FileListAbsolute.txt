@@ -1,0 +1,11 @@
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/TheWall/bin/Debug/netcoreapp2.0/TheWall.deps.json
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/TheWall/bin/Debug/netcoreapp2.0/TheWall.runtimeconfig.json
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/TheWall/bin/Debug/netcoreapp2.0/TheWall.runtimeconfig.dev.json
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/TheWall/bin/Debug/netcoreapp2.0/TheWall.dll
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/TheWall/bin/Debug/netcoreapp2.0/TheWall.pdb
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/TheWall/obj/Debug/netcoreapp2.0/TheWall.csprojResolveAssemblyReference.cache
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/TheWall/obj/Debug/netcoreapp2.0/TheWall.csproj.CoreCompileInputs.cache
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/TheWall/obj/Debug/netcoreapp2.0/TheWall.AssemblyInfoInputs.cache
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/TheWall/obj/Debug/netcoreapp2.0/TheWall.AssemblyInfo.cs
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/TheWall/obj/Debug/netcoreapp2.0/TheWall.dll
+/Users/Curry30/Desktop/coding_dojo/C#.Net/day11/TheWall/obj/Debug/netcoreapp2.0/TheWall.pdb

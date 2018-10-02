@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/index.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>CodingDojo Wall</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Register</h1>
+        @model RegisterViewModel
+        <form asp-action="Register" asp-controller="Home" method="POST">
+        <span asp-validation-for="first_name" style="color:red"></span> 
+        <label asp-for="first_name">First Name: </label> 
+        <input class="form-control" type="text" asp-for="first_name">
+
+        <span asp-validation-for="last_name" style="color:red"></span> 
+        <label asp-for="last_name">Last Name: </label> 
+        <input class="form-control" type="text" asp-for="last_name">
+
+        <span asp-validation-for="email" style="color:red"></span> 
+        <label asp-for="email">Email:</label> 
+        <input class="form-control" type="text" asp-for="email">
+
+        <span asp-validation-for="password" style="color:red"></span> 
+        <label asp-for="password">Password: </label> 
+        <input class="form-control" type="password" asp-for="password">
+
+        <span asp-validation-for="confirm" style="color:red"></span> 
+        <label asp-for="confirm">Confirm Password: </label> 
+        <input class="form-control" type="password" asp-for="confirm">
+        <br>
+        <button type="submit">Submit</button>
+        <a href="/Login">Already registered?</a>
+    </form>
+    </div>
+</body>
+</html>
